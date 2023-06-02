@@ -3,7 +3,7 @@
 #データベースに接続
 $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
 try {
     $dbh = new PDO($dsn, $user, $pass);
