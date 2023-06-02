@@ -17,7 +17,7 @@ try {
     id INT PRIMARY KEY AUTO_INCREMENT,
     name varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     rarity varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-    created_at timestamp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci default now()
+    created_at timestamp default now()
     );
     ALTER TABLE gacha COLLATE 'utf8mb4_general_ci';
 _SQL_;
