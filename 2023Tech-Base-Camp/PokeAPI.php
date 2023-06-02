@@ -13,7 +13,7 @@ foreach ($data['results'] as $key => $value) {
 
     $detResponse = file_get_contents($detUrl);
     $detData = json_decode($detResponse, true);
-    var_dump($detData['sprites'][]);
+    var_dump($detData['sprites']['front_default']);
     var_dump($detData['name']);
     var_dump($detData['types']);
     var_dump($detData['height']);
