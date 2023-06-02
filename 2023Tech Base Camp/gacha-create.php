@@ -2,8 +2,8 @@
 
 #データベースに接続
 $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
-$user = 'testuser';
-$pass = 'testpass';
+$user = 'ec2-user';
+$pass = '';
 
 try {
     $dbh = new PDO($dsn, $user, $pass);
