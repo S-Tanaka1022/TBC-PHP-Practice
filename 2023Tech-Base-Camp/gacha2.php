@@ -105,11 +105,13 @@ if ($_GET && isset($_GET["gacha"])) {
                 $SQL = <<<_SQL_
         INSERT INTO gacha(
         name,
-        rarity
+        rarity,
+        created_at
         )
         VALUES (
         '{$charname}',
         '{$rarity}'
+        '{$time}'
         )
 _SQL_;
 
