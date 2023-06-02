@@ -7,17 +7,18 @@ $response = file_get_contents($url);
 $data = json_decode($response, true);
 // var_dump($data);
 // 取得結果をループさせてポケモンの名前を表示する
-print("<pre>");
+
 foreach ($data['results'] as $key => $value) {
     $detUrl = ($value['url']);
 
     $detResponse = file_get_contents($detUrl);
     $detData = json_decode($detResponse, true);
+    print("<pre>");
     var_dump($detData['sprites']['front_default']);
     var_dump($detData['name']);
     var_dump($detData['types']);
     var_dump($detData['height']);
     var_dump($detData['weight']);
     echo $detUrl . "<br>";
+    print("</pre>");
 }
-print("</pre>");
