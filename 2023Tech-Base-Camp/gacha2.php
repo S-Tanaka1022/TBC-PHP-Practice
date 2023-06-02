@@ -65,17 +65,17 @@ if ($_GET && isset($_GET["gacha"])) {
     $rand = rand(1, 100);
 
     #星1は40%に設定
-    if (1 <= $rand && $rand < 40) {
+    if (1 <= $rand && $rand < 50) {
         $rarity = 1;
         $charname = $randname1;
     }
     #星4は30%に設定
-    elseif (40 <= $rand && $rand < 70) {
+    elseif (50 <= $rand && $rand < 75) {
         $rarity = 2;
         $charname = $randname4;
     }
     #星7は20%に設定
-    elseif (70 <= $rand && $rand < 90) {
+    elseif (75 <= $rand && $rand < 95) {
         $rarity = 3;
         $charname = $randname7;
     }
