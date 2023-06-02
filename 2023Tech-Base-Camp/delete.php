@@ -13,7 +13,7 @@ try {
 
         # SQL文を定める
         $SQL = <<<_SQL_
-        DROP TABLE booksample
+        DROP TABLE gacha
 _SQL_;
     }
 } catch (PDOException $e) {
