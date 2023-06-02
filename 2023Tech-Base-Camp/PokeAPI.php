@@ -1,6 +1,6 @@
 <?php
 // PokeAP1 のデータを取得する ( id = 11 から 29 のポケモンのデータ ) * /
-$url = 'https://pokeapi.co/api/v2/pokemon/1/?limit=10$offset=0';
+$url = 'https://pokeapi.co/api/v2/pokemon/?limit=10$offset=0';
 $response = file_get_contents($url);
 
 // レスポンスデータは JSON 形式なので 、デコードして連想配列にする
