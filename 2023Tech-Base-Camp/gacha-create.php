@@ -19,7 +19,7 @@ try {
     rarity VARCHAR(255),
     created_at timestamp default now()
     );
-    ALTER TABLE gacha COLLATE 'utf8_general_ci';
+    ALTER TABLE gacha COLLATE 'utf8mb4_general_ci';
 _SQL_;
 
         $dbh->query($SQL);
