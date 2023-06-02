@@ -14,7 +14,7 @@ try {
 
         $SQL = <<<_SQL_
     CREATE TABLE gacha (
-    id	INT	PRIMARY KEY	AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
     rarity VARCHAR(255),
     created_at timestamp default now()
