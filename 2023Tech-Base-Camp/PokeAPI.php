@@ -5,12 +5,12 @@ $response = file_get_contents($url);
 
 // レスポンスデータは JSON 形式なので 、デコードして連想配列にする
 $data = json_decode($response, true);
-var_dump($data);
+// var_dump($data);
 // 取得結果をループさせてポケモンの名前を表示する
 print("<pre>");
 foreach ($data['results'] as $key => $value) {
     $detUrl = ($value['url']);
-    echo $detUrl;
+    echo $detUrl . "<br>";
 }
 print("</pre>");
 
