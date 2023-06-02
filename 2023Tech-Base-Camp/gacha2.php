@@ -88,8 +88,8 @@ if ($_GET && isset($_GET["gacha"])) {
 
     #データベースに接続
     $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
-    $user = 'testuser';
-    $pass = 'testpass';
+    $user = 'root';
+    $pass = 'root';
 
     #$randに合わせて設定された$rarityと$charnameを挿入
     if ($_GET) {
@@ -128,8 +128,8 @@ _SQL_;
 if (isset($_GET["delete"])) {
     #データベースに接続
     $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
-    $user = 'testuser';
-    $pass = 'testpass';
+    $user = 'root';
+    $pass = 'root';
 
     try {
         $dbh = new PDO($dsn, $user, $pass);
@@ -152,8 +152,8 @@ if (isset($_GET["delete"])) {
 } elseif (isset($_GET["zero"])) {
     #データベースに接続
     $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
-    $user = 'testuser';
-    $pass = 'testpass';
+    $user = 'root';
+    $pass = 'root';
 
     try {
         $dbh = new PDO($dsn, $user, $pass);
@@ -190,8 +190,8 @@ if (isset($_GET["header"])) {
 #表示機能
 try {
     $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
-    $user = 'testuser';
-    $pass = 'testpass';
+    $user = 'root';
+    $pass = 'root';
 
 
     $dbh = new PDO($dsn, $user, $pass);
