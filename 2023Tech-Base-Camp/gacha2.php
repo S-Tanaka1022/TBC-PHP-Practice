@@ -90,7 +90,7 @@ if ($_GET && isset($_GET["gacha"])) {
     $dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
     $user = 'root';
     $pass = 'root';
-    $time = date("H:i:s");
+    $time = date("yyyy/mm/dd H:i:s");
     echo $time;
     #$randに合わせて設定された$rarityと$charnameを挿入
     if ($_GET) {
