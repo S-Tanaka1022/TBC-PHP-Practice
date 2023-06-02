@@ -17,7 +17,7 @@ try {
     id	INT	PRIMARY KEY	AUTO_INCREMENT,
     name VARCHAR(255),
     rarity VARCHAR(255),
-    created_at timestamp default current_timestamp
+    created_at timestamp default now()
     )
 _SQL_;
 
