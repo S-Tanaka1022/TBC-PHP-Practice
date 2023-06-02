@@ -15,6 +15,8 @@ try {
         $SQL = <<<_SQL_
         DROP TABLE gacha
 _SQL_;
+        $dbh->query($SQL);
+        echo "ガチャテーブルを削除しました。";
     }
 } catch (PDOException $e) {
     echo "エラー内容：" . $e->getMessage();
