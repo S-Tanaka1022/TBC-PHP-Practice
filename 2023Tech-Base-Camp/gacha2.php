@@ -110,7 +110,7 @@ if ($_GET && isset($_GET["gacha"])) {
         )
         VALUES (
         '{$charname}',
-        '{$rarity}'
+        '{$rarity}',
         '{$time}'
         )
 _SQL_;
