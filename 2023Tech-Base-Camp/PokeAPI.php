@@ -10,17 +10,13 @@ $data = json_decode($response, true);
 print("<pre>");
 foreach ($data['results'] as $key => $value) {
     $detUrl = ($value['url']);
+
+    $detResponse = file_get_contents($detUrl);
+    var_dump($value['forms']);
+    var_dump($value['name']);
+    var_dump($value['types']);
+    var_dump($value['height']);
+    var_dump($value['weight']);
     echo $detUrl . "<br>";
 }
 print("</pre>");
-
-
-// print("<pre>");
-// foreach ($data['results'] as $key => $value) {
-//     var_dump($value['forms']);
-//     var_dump($value['name']);
-//     var_dump($value['types']);
-//     var_dump($value['height']);
-//     var_dump($value['weight']);
-// }
-// print("</pre>");
