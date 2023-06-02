@@ -18,7 +18,8 @@ try {
     name VARCHAR(255),
     rarity VARCHAR(255),
     created_at timestamp default now()
-    )
+    );
+    ALTER TABLE booksample COLLATE 'utf8_general_ci';
 _SQL_;
 
         $dbh->query($SQL);
