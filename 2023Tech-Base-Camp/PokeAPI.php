@@ -14,11 +14,11 @@ foreach ($data['results'] as $key => $value) {
     $detResponse = file_get_contents($detUrl);
     $detData = json_decode($detResponse, true);
 
-    var_dump($value['forms']);
-    var_dump($value['name']);
-    var_dump($value['types']);
-    var_dump($value['height']);
-    var_dump($value['weight']);
+    var_dump($detData['forms']);
+    var_dump($detData['name']);
+    var_dump($detData['types']);
+    var_dump($detData['height']);
+    var_dump($detData['weight']);
     echo $detUrl . "<br>";
 }
 print("</pre>");
