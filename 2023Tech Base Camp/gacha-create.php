@@ -1,8 +1,8 @@
 <?php
 
 #データベースに接続
-$dsn = 'mysql:host=54.177.144.65; dbname=booksample; charset=utf8';
-$user = 'ec2-user';
+$dsn = 'mysql:host=localhost; dbname=booksample; charset=utf8';
+$user = 'root';
 $pass = '';
 
 try {
