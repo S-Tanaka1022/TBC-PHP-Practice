@@ -12,6 +12,8 @@ foreach ($data['results'] as $key => $value) {
     $detUrl = ($value['url']);
 
     $detResponse = file_get_contents($detUrl);
+    $detData = json_decode($detResponse, true);
+
     var_dump($value['forms']);
     var_dump($value['name']);
     var_dump($value['types']);
