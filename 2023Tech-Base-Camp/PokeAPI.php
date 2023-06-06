@@ -4,6 +4,8 @@ if (isset($_GET["next"])) {
     $page = $_GET["page"] + 10;
 } elseif (isset($_GET["back"]) && $_GET["page"] >= 10) {
     $page = $_GET["page"] - 10;
+} elseif (isset($_GET["id"])) {
+    $page = $GET["id"] - 1;
 } else {
     $page = 0;
 }
