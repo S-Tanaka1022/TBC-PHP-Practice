@@ -61,11 +61,19 @@ foreach ($data['results'] as $key => $value) {
 
     #英名の取得
     $Ename = $detData['name'];
+
+
     #タイプの取得 
     $typestring = $detData['types'];
     $typenum = $typestring[0];
     $typekey = $typenum['type'];
-    $type = $typekey["name"];
+    $Etype = $typekey["name"];
+    $tyUrl = "https://pokeapi.co/api/v2/type/$Etype";
+    $TYResponse = file_get_contents($tyUrl);
+    $TYData = json_decode($TYResponse, true);
+    $type = $TYData["names"]["0"]["name"];
+
+
     #高さ・重さの取得
     $height = $detData['height'];
     $weight = $detData['weight'];
