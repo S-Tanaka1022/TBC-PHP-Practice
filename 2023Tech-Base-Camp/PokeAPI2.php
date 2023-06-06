@@ -1,5 +1,7 @@
 <?php
+session_start();
 $id = $_GET['dId'];
+$_SESSION["id"] = $id;
 $url = "https://pokeapi.co/api/v2/pokemon/$id";
 $response = file_get_contents($url);
 
