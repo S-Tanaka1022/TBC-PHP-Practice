@@ -1,7 +1,5 @@
 <?php
-session_start();
 $id = $_GET['dId'];
-$_SESSION["id"] = $id;
 $url = "https://pokeapi.co/api/v2/pokemon/$id";
 $response = file_get_contents($url);
 
@@ -21,7 +19,7 @@ $img_back = ($data['sprites']['back_default']);
 #英名の取得
 $Ename = $data['name'];
 #タイプの取得 
-$typestring = $detData['types'];
+$typestring = $data['types'];
 $typenum = $typestring[0];
 $typekey = $typenum['type'];
 $Etype = $typekey["name"];
@@ -68,7 +66,7 @@ echo <<<___ex___
 </body>
 
 </html>
-        
+
 <form action="PokeAPI.php">
 <input type='submit' value='一覧に戻る'>
 <input type='hidden' name='id' value='$id'>

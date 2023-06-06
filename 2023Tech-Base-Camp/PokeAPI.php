@@ -41,8 +41,8 @@ echo <<<___title___
                 <th id="form">form</th>
                 <th id="name">name</th>
                 <th id="type">type</th>
-                <th id="height">height</th>
-                <th id="weight">weight</th>
+                <th id="height">height(m)</th>
+                <th id="weight">weight(kg)</th>
                 <th>detail</th>
             </tr>
 ___title___;
@@ -66,6 +66,7 @@ foreach ($data['results'] as $key => $value) {
     #英名の取得
     $Ename = $detData['name'];
 
+
     #タイプの取得 
     $typestring = $detData['types'];
     $typenum = $typestring[0];
@@ -78,8 +79,8 @@ foreach ($data['results'] as $key => $value) {
 
 
     #高さ・重さの取得
-    $height = $detData['height'];
-    $weight = $detData['weight'];
+    $height = $detData['height'] * 0.1;
+    $weight = $detData['weight'] * 0.1;
 
 
     echo <<<___table___
