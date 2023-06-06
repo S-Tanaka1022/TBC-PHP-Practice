@@ -21,10 +21,14 @@ $img_back = ($data['sprites']['back_default']);
 #英名の取得
 $Ename = $data['name'];
 #タイプの取得 
-$typestring = $data['types'];
+$typestring = $detData['types'];
 $typenum = $typestring[0];
 $typekey = $typenum['type'];
-$type = $typekey["name"];
+$Etype = $typekey["name"];
+$tyUrl = "https://pokeapi.co/api/v2/type/$Etype";
+$TYResponse = file_get_contents($tyUrl);
+$TYData = json_decode($TYResponse, true);
+$type = $TYData["names"]["0"]["name"];
 
 #図鑑説明の取得
 $exprain = $nameData['flavor_text_entries']['22']['flavor_text'];
