@@ -66,7 +66,6 @@ foreach ($data['results'] as $key => $value) {
     #英名の取得
     $Ename = $detData['name'];
 
-
     #タイプの取得 
     $typestring = $detData['types'];
     $typenum = $typestring[0];
