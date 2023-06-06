@@ -1,5 +1,7 @@
 <?php
+session_start();
 $id = $_GET['dId'];
+$_SESSION["id"] = $id;
 $url = "https://pokeapi.co/api/v2/pokemon/$id";
 $response = file_get_contents($url);
 
@@ -64,7 +66,7 @@ echo <<<___ex___
 </html>
 
 <form action="PokeAPI.php">
-<input type='submit' value='一覧に戻る'>
+<input type='submit' name='all' value='一覧に戻る'>
 </form>
 
 ___ex___;

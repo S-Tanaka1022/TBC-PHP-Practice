@@ -4,6 +4,9 @@ if (isset($_GET["next"])) {
     $page = $_GET["page"] + 10;
 } elseif (isset($_GET["back"]) && $_GET["page"] >= 10) {
     $page = $_GET["page"] - 10;
+} elseif (isset($_GET["all"])) {
+    $page = $_SESSION["id"];
+    session_destroy();
 } else {
     $page = 0;
 }
@@ -61,7 +64,6 @@ foreach ($data['results'] as $key => $value) {
 
     #英名の取得
     $Ename = $detData['name'];
-
 
     #タイプの取得 
     $typestring = $detData['types'];
