@@ -62,7 +62,7 @@ echo <<<___ex___
 </body>
 
 </html>
-
+        
 <form action="PokeAPI.php">
 <input type='submit' value='一覧に戻る'>
 <input type='hidden' name='id' value='$id'>

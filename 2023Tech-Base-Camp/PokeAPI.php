@@ -1,15 +1,4 @@
 <?php
-
-if (isset($_GET["next"])) {
-    $page = $_GET["page"] + 10;
-} elseif (isset($_GET["back"]) && $_GET["page"] >= 10) {
-    $page = $_GET["page"] - 10;
-} elseif (isset($_GET["id"])) {
-    $page = $GET["id"] - 1;
-} else {
-    $page = 0;
-}
-
 if (isset($_GET["10"])) {
     $limit = 10;
 } elseif (isset($_GET["20"])) {
@@ -18,11 +7,24 @@ if (isset($_GET["10"])) {
     $limit = 50;
 } elseif (isset($_GET["100"])) {
     $limit = 100;
-} elseif ($_GET) {
+} elseif (isset($_GET["count"])) {
     $limit = $_GET["count"];
 } else {
     $limit = 10;
 }
+
+if (isset($_GET["next"])) {
+    $page = $_GET["page"] + $limit;
+} elseif (isset($_GET["back"]) && $_GET["page"] >= 10) {
+    $page = $_GET["page"] - $limit;
+} elseif (isset($_GET["id"])) {
+    $page = $_GET["id"] - 1;
+} elseif (isset($_GET["page"])) {
+    $page = $_GET["page"];
+} else {
+    $page = 0;
+}
+
 // PokeAP1 のデータを取得する ( id = 11 から 29 のポケモンのデータ ) * /
 $url = "https://pokeapi.co/api/v2/pokemon/?limit=$limit&offset=$page";
 $response = file_get_contents($url);
