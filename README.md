@@ -6,6 +6,8 @@
 - `gacha-create.php` : ガチャアプリケーションのためのテーブル作成ファイルです。
 - `gacha2.php` : ポケモンのガチャができるアプリケーションです。
 - `gacha2.css` : `gacha2.php`用のスタイルシートです。
+- `PokeAPI.php` : PokeAPIを使ったポケモン図鑑です。
+- `PokeAPI2.php` : PokeAPIから詳細情報の参照に使うファイルです。PokeAPI.phpから開きます。
 
 ## 開発の経緯
 
