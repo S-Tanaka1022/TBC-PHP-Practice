@@ -32,8 +32,8 @@ $type = $TYData["names"]["0"]["name"];
 $exprain = $nameData['flavor_text_entries']['22']['flavor_text'];
 
 #高さ・重さの取得
-$height = $data['height'];
-$weight = $data['weight'];
+$height = $data['height'] * 0.1;
+$weight = $data['weight'] * 0.1;
 
 echo <<<___ex___
 
@@ -56,20 +56,23 @@ echo <<<___ex___
         <img src=$img alt="Front">
         <img src=$img_back alt="Back">
     </div>
-    <div style="margin-top: 20px;">
+    <div style="margin: 20px 50px">
         <h1>$Jname</h1>
         <p><strong>タイプ: </strong>$type</p>
         <p><strong>図鑑説明: </strong>$exprain</p>
-        <p><strong>高さ: </strong>$height </p>
-        <p><strong>重さ: </strong>$weight </p>
-    </div>
-</body>
+        <p><strong>高さ: </strong>{$height}m </p>
+        <p><strong>重さ: </strong>{$weight}kg </p>
+    
+        <div style="display: flex;">
+            <form action="PokeAPI.php">
+            <input type='submit' value='一覧に戻る'>
+            <input type='hidden' name='id' value='$id'>
+            </form>
+        </div>
+    </body>
 
 </html>
 
-<form action="PokeAPI.php">
-<input type='submit' value='一覧に戻る'>
-<input type='hidden' name='id' value='$id'>
-</form>
+
 
 ___ex___;
